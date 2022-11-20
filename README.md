@@ -16,7 +16,7 @@ https://youtu.be/vekblEk6UPc
 
 * If started successfully in the console:
 
-'''
+```
 CONFIDENCE SET FOR PEOPLE DETECTION IS:  0.6
 MQTT APP ENABLED IS:  False
 WEB APP ENABLED IS:  True
@@ -28,7 +28,7 @@ WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
  * Running on http://10.100.100.17:5000
 Press CTRL+C to quit
-'''
+```
 
 * Dial into computer vision output on port 5000
 
