@@ -2,26 +2,33 @@
 Full Stack Tensor Flow Lite Rasp Pi App for People Detecting tested on Buster B+ Model
 
 
-# Install TF Lite on Rasp Pi and setup on virtual env:
+* Install TF Lite on Rasp Pi and setup on virtual env:
 https://youtu.be/vekblEk6UPc
 
-# pip install flask:
+* pip install flask:
 `$ python -m pip install flask`
 
-# pip install paho mqtt:
+* pip install paho mqtt:
 `$ python -m pip install paho-mqtt`
 
-# start web app
+* Start web app
 `$ python app.py`
 
-# dial into computer vision output on port 5000
+* Dial into computer vision output on port 5000
 
 ![exampleSnip](/images/cap.PNG)
 
-# rest API endpoint for detected people
+* Rest API endpoint for detected people
 
 ![exampleSnip](/images/peoplecount.PNG)
 
-# rest API endpoint for frame rate per second
+* Rest API endpoint for frame rate per second
 
 ![exampleSnip](/images/fps.PNG)
+
+# optional args:
+`--use-mqtt` (use MQTT)
+`--no-flask` (disable web app features)
+`--confidence` (detection confidence)
+
+
