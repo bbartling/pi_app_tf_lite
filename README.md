@@ -15,6 +15,7 @@ https://youtu.be/vekblEk6UPc
 `$ python app.py`
 
 * If started successfully in the console:
+
 '''
 CONFIDENCE SET FOR PEOPLE DETECTION IS:  0.6
 MQTT APP ENABLED IS:  False
