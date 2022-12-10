@@ -5,6 +5,9 @@ Full Stack Tensor Flow Lite Rasp Pi App for People Detecting tested on headless 
 * Install TF Lite on Rasp Pi and setup on virtual env:
 https://youtu.be/vekblEk6UPc
 
+* pip install cv2
+`$ python -m pip install opencv-python`
+
 * pip install flask:
 `$ python -m pip install flask`
 

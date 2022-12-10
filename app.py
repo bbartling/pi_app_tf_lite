@@ -53,7 +53,13 @@ print("WEB APP ENABLED IS: ", USE_FLASK)
 def insert_people_count(image, people, fps):
 
     cv2.putText(
-        image, f"People: {people}", (1, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 0), 1
+        image,
+        f"People: {people}",
+        (1, 25),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.5,
+        (0, 0, 0),
+        1
     )
 
     cv2.putText(
@@ -61,33 +67,13 @@ def insert_people_count(image, people, fps):
         f"Fps: {str(round(fps, 2))}",
         (1, 50),
         cv2.FONT_HERSHEY_SIMPLEX,
-        0.8,
+        0.5,
         (0, 0, 0),
         1,
     )
 
     return image
 
-
-def postprocess(result, image, fps):
-
-    detections = result.reshape(-1, 7)
-    people = 0
-
-    for i, detection in enumerate(detections):
-        _, image_id, CONFIDENCE, xmin, ymin, xmax, ymax = detection
-        if CONFIDENCE > 0.5:
-
-            people += 1
-
-            xmin = int(max((xmin * image.shape[1]), 10))
-            ymin = int(max((ymin * image.shape[0]), 10))
-            xmax = int(min((xmax * image.shape[1]), image.shape[1] - 10))
-            ymax = int(min((ymax * image.shape[0]), image.shape[0] - 10))
-
-    image = insert_people_count(image, people, fps)
-
-    return image, people
 
 
 def detect(interpreter, videostream, routes):
